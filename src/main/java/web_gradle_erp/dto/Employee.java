@@ -12,7 +12,6 @@ public class Employee {
 	private Date hireDate;
 
 	public Employee() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Employee(int empNo) {

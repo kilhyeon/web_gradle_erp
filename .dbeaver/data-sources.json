@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql8-178ab0944a5-1b8353d678393b8d": {
+		"mysql8-178ac7eda4f-5d6367200c45592c": {
 			"provider": "mysql",
 			"driver": "mysql8",
 			"name": "localhost",
@@ -18,7 +18,7 @@
 				"handlers": {}
 			}
 		},
-		"mysql8-178ab11a166-4acf3264926aa114": {
+		"mysql8-178ac7f6ba7-9c44c573e36a1c0": {
 			"provider": "mysql",
 			"driver": "mysql8",
 			"name": "web_gradle_erp",
