@@ -21,7 +21,6 @@ public class Employee {
 
 	public Employee(int empNo, String empName, Title title, Employee manager, int salary, Department dept,
 			Date hireDate) {
-		super();
 		this.empNo = empNo;
 		this.empName = empName;
 		this.title = title;
@@ -79,6 +78,7 @@ public class Employee {
 		this.dept = dept;
 	}
 
+	
 	public Date getHireDate() {
 		return hireDate;
 	}

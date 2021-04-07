@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql8-178ab094dc9-5c28510680e387d8": {
+		"mysql8-178ab0944a5-1b8353d678393b8d": {
 			"provider": "mysql",
 			"driver": "mysql8",
 			"name": "localhost",
@@ -14,13 +14,14 @@
 				"url": "jdbc:mysql://localhost:3306/",
 				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
 				"type": "dev",
-				"auth-model": "native"
+				"auth-model": "native",
+				"handlers": {}
 			}
 		},
-		"mysql8-178ab11a742-54c422f4a800d214": {
+		"mysql8-178ab11a166-4acf3264926aa114": {
 			"provider": "mysql",
 			"driver": "mysql8",
-			"name": "web_gradle_erp(user)",
+			"name": "web_gradle_erp",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,

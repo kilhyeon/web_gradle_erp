@@ -9,11 +9,8 @@ import javax.sql.DataSource;
 
 public class JndiDS {
 	private static DataSource ds;
+	private JndiDS() {}
 
-	private JndiDS() {
-	}
-
-	// static 생성자 호출전 먼저 실행
 	static {
 		try {
 			InitialContext ic = new InitialContext(); // 1. JNDI 서버 객체 생성
@@ -32,5 +29,4 @@ public class JndiDS {
 		}
 		return null;
 	}
-
 }

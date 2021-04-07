@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-방가방가~~
+방가방가!!
 <%=JndiDS.getConnection() %>
 </body>
 </html>

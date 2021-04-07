@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -22,7 +21,7 @@ import web_gradle_erp.dto.Title;
 public class TitleDaoTest {
 	private static Connection con;
 	private static TitleDaoImpl dao = TitleDaoImpl.getInstance();
-
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		con = JdbcUtil.getConnection();
@@ -34,36 +33,33 @@ public class TitleDaoTest {
 		con.close();
 	}
 
-	@Before
-	public void init() throws Exception {
-	}
-
 	@After
 	public void tearDown() throws Exception {
+		System.out.println();
 	}
 
 	@Test
 	public void test01SelectTitleByAll() {
-		System.out.printf("%s()%n", "test01SelectTitleByAll()");
+		System.out.printf("%s()%n", "test01SelectTitleByAll");
+		
 		List<Title> list = dao.selectTitleByAll();
 		Assert.assertNotNull(list);
 		
 		list.parallelStream().forEach(System.out::println);
-		
 	}
 
 	@Test
-	public void test02SelectTitleByNo() {
+	public void test04SelectTitleByNo() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void test03InsertTitle() {
+	public void test02InsertTitle() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void test04UpdateTitle() {
+	public void test03UpdateTitle() {
 		fail("Not yet implemented");
 	}
 

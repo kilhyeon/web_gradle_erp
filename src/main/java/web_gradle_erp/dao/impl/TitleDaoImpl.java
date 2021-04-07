@@ -22,19 +22,18 @@ public class TitleDaoImpl implements TitleDao {
 		return instance;
 	}
 
-	private TitleDaoImpl() {
-	}
+	private TitleDaoImpl() {}
 
 	@Override
 	public List<Title> selectTitleByAll() {
 		String sql = "select titleNo, titleName from title";
-
-		try (PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
+		try(PreparedStatement pstmt = con.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery()){
 			if (rs.next()) {
 				List<Title> list = new ArrayList<Title>();
 				do {
 					list.add(getTitle(rs));
-				} while (rs.next());
+				}while(rs.next());
 				return list;
 			}
 		} catch (SQLException e) {
@@ -44,9 +43,10 @@ public class TitleDaoImpl implements TitleDao {
 	}
 
 	private Title getTitle(ResultSet rs) throws SQLException {
-		int tNo = rs.getInt("tNo");
-		String tName = rs.getString("tName");
-		return new Title(tNo, tName);
+		//titleNo, titleName
+		int titleNo = rs.getInt("titleNo");
+		String titleName = rs.getString("titleName");
+		return new Title(titleNo, titleName);
 	}
 
 	@Override
